@@ -1,0 +1,41 @@
+.activity {
+    background: #fff;
+    > div {
+        @include outer-container;
+        padding: 0 $gutter $gutter $gutter;
+        .col {
+            padding-left: 20px;
+            border-left: 1px solid $green;
+            h4 {
+                color: $green;
+            }
+        }
+        .col:last-child {
+            border-left: 1px solid $purple;
+            h4 {
+                color: $purple;
+            }
+        }
+        @media only screen and (min-width: 500px) {
+            .col {
+                @include span-columns(6);
+            }
+        }
+    }
+}
+.activity-number, .activity-time {
+    display: inline-block;
+    padding: 10px;
+}
+.activity-number {
+    background: $yellow;
+    padding-left: $gutter;
+    padding-right: $gutter;
+}
+
+.act-pack-download {
+    margin: 2em 0;
+    padding: $gutter;
+    border-left: 4px solid #3498DB;
+    padding: 0.8em 0.5em;
+}

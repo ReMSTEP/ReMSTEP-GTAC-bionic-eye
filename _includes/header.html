@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/normalize.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+    <script src="{{ site.baseurl }}/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <header class="site-header">
+        <div class="banner">
+            <div class="container">
+                {% if page.url == "/" %}
+                <h1>Bionic Eye Teaching Sequence</h1>
+                <p>for maths/science level 9 of the Australian Curriculum</p>
+                {% else %}
+                <h2>Bionic Eye Teaching Sequence</h2>
+                <p>for maths/science level 9 of the Australian Curriculum</p>
+                {% endif %}
+            </div>
+        </div>
+        <nav class="main-menu">
+            <div class="container">
+                {% assign url_parts = page.url | split: '/' %}
+                {% assign parentL1 = url_parts[1] %}
+                <ul>
+                    <li><a {% if page.url == "/" %}class="active"{% endif %} href="{{ site.baseurl }}/">Home</a></li>
+                    <li><a {% if parentL1 == "module-one" %}class="active"{% endif %} href="{{ site.baseurl }}/module-one/">Module 1</a></li>
+                    <li><a {% if parentL1 == "module-two" %}class="active"{% endif %} href="{{ site.baseurl }}/module-two/">Module 2</a></li>
+                    <li><a {% if parentL1 == "module-three" %}class="active"{% endif %} href="{{ site.baseurl }}/module-three/">Module 3</a></li>
+                    <li><a {% if parentL1 == "module-four" %}class="active"{% endif %} href="{{ site.baseurl }}/module-four/">Module 4</a></li>
+                    <li><a {% if parentL1 == "module-five" %}class="active"{% endif %} href="{{ site.baseurl }}/module-five/">Module 5</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>

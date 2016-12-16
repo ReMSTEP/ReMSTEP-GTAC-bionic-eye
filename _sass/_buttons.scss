@@ -1,0 +1,41 @@
+button,
+.button {
+    display: inline-block;
+    background: #D6ECFF;
+    border: 1px solid #f1f1f1;
+    box-shadow: 2px 2px 0 #3498DB;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease-in-out;
+    span {
+        display: block;
+        font-size: 0.8em;
+    }
+    &:hover {
+        box-shadow: 4px 4px 0 #666;
+    }
+    &:active {
+        box-shadow: 0px 0px 0 #666;
+    }
+    &.toggle {
+        &:after {
+            display: inline-block;
+            content: "+";
+            margin-left: 0.5em;
+            transition: transform 1s ease;
+        }
+        &.open {
+            &:after {
+                transform: rotate(230deg);
+            }
+        }
+    }
+}
+.download {
+    &:after {
+        content: "\2193";
+        margin-left: 0.5em;
+    }
+}

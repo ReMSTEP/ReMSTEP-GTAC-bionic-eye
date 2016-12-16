@@ -1,0 +1,43 @@
+main {
+    padding: 2em 0;
+}
+
+.container {
+    max-width: 1040px;
+    padding: 0 $gutter;
+    margin: 0 auto;
+    position: relative;
+}
+
+.outer-container {
+    @media screen and (min-width: 580px) {
+        @include outer-container;
+        display: flex;
+    }
+}
+
+/* grid */
+.one-third {
+    @media screen and (min-width: 580px) {
+        @include span-columns(6);
+    }
+    @media screen and (min-width: 800px) {
+        @include span-columns(4);
+    }
+}
+.two-thirds {
+    @media screen and (min-width: 580px) {
+        @include span-columns(6);
+    }
+    @media screen and (min-width: 800px) {
+        @include span-columns(8);
+    }
+}
+.one-fourth {
+    @media screen and (min-width: 580px) {
+        @include span-columns(6);
+    }
+    @media screen and (min-width: 800px) {
+        @include span-columns(3);
+    }
+}

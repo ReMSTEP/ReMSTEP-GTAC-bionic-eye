@@ -1,0 +1,10 @@
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+      
+baseurl: /exemplars/bionic-eye
+google-analytics-code: UA-49823608-1
+gems: [bourbon, neat]

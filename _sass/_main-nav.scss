@@ -1,0 +1,29 @@
+.main-menu {
+    background: #fff;
+    ul, li {
+        list-style-type: none;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        white-space: nowrap;
+        overflow-x: scroll;
+    }
+    li {
+        display: inline;
+    }
+    a {
+        display: inline-block;
+        padding: 20px;
+        color: #666;
+        text-decoration: none;
+        &.active {
+            color: #222;
+            border-bottom: 3px solid #f0d900;
+        }
+        &:hover {
+            border-bottom: 3px solid #ccc;
+        }
+    }
+}

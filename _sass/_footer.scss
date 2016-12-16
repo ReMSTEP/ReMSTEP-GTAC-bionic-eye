@@ -1,0 +1,66 @@
+.acknowledgement {
+    padding: 10px 0px;
+    background: #D6ECFF; //#C2E2FF;
+}
+.acknowledgement p {
+    font-size: 0.875em;
+    text-align: center;
+    max-width: 820px;
+    margin: 0.5em auto;
+}
+
+.site-footer {
+    position: relative;
+    color: #fff;
+    background: rgba(144, 91, 161, 0.8);
+    .logos {
+        @include outer-container;
+        padding: 1em 0;
+        display: flex;
+        > div {
+            @include span-columns(4);
+            text-align: center;
+            font-size: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        img {
+            width: 80%;
+        }
+    }
+}
+.site-info {
+    background: #444;
+}
+.site-info .container {
+    padding: 0px 20px;
+    font-size: 0.75em;
+}
+.site-info .designer {
+    max-width: 100%;
+    margin: 30px 0;
+    text-align: center;
+}
+@media only screen and (min-width: 37.5em) {
+    .site-info .designer {
+        float: right;
+    }
+}
+.cc {
+    position: relative;
+    max-width: 540px;
+    padding: 20px 0 20px 120px;
+}
+.cc img {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: auto;
+}
+.cc p {
+    margin: 0;
+}
+.cc a {
+    color: #fff;
+}
