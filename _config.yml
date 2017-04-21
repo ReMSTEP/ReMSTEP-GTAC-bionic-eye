@@ -5,6 +5,6 @@ defaults:
     values:
       layout: "default"
       
-baseurl: /exemplars/bionic-eye
+baseurl: /outcomes/resources/bionic-eye
 google-analytics-code: UA-49823608-1
 gems: [bourbon, neat]
